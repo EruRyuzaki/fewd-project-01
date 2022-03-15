@@ -4,3 +4,4 @@ Project: 01 - Personal Blog Website
 <br><br>
 Please follow this link:
 <br>
+https://eruryuzaki.github.io/fewd-project-01/index.html
