@@ -1,0 +1,56 @@
+/* =============================================================================    imports         */
+
+@import url(../globals/global.css);
+
+/* =============================================================================    media queries   */
+
+@media (min-width: 768px) {
+
+    .author-section .section-grid {
+        grid-template-areas:
+            "pic title"
+            "text text";
+        column-gap: 10%;
+    }
+
+    .author-section .section-grid .picture-box {
+        justify-content: flex-end;
+    }
+
+    .author-section .section-grid .title-box {
+        text-align: left;
+        padding: 0 5% 0 0;
+    }
+
+    .author-section .section-grid .text-box {
+        padding: 0 10% 0 10%;
+    }
+
+    footer .footer-grid {
+        grid-template-areas:
+            "quote quote quote quote"
+            "news news links contact";
+    }
+
+    footer .footer-grid .newsletter-box {
+        text-align: left;
+    }
+
+    footer .footer-grid .links-box {
+        text-align: left;
+    }
+
+    footer .footer-grid .contact-box {
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .posts-section .section-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+    }
+
+}

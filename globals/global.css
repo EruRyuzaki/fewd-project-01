@@ -1,0 +1,95 @@
+/* =============================================================================    root            */
+
+:root {
+
+    --color-black-1: hsl(0, 0%, 0%, 1);
+    --color-white-1: hsl(255, 0%, 95%, 1);
+    --color-white-2: hsl(255, 0%, 95%, 0.2);
+    --color-blue-1: hsl(220, 100%, 60%, 1);
+    --color-background-1: hsl(0, 0%, 15%, 1);
+    --color-background-2: hsl(0, 0%, 9%, 1);
+    --color-background-blend: hsl(0, 0%, 0%, 0.6);
+
+    --box-shadow-1: 0 0 1rem var(--color-black-1);
+    --box-shadow-2: 0 0 2rem var(--color-black-1);
+
+    --h-size-1-0: 1rem;
+    --h-size-1-5: 1.5rem;
+    --h-size-2-0: 2rem;
+    --h-size-2-5: 2.5rem;
+    --h-size-3-0: 3rem;
+    --h-size-3-5: 3.5rem;
+    --h-size-4-0: 4rem;
+    --h-size-4-5: 4.5rem;
+    --h-size-5-0: 5rem;
+    --h-size-5-5: 5.5rem;
+    --h-size-6-0: 6rem;
+    --h-size-6-5: 6.5rem;
+    --h-size-7-0: 7rem;
+    --h-size-7-5: 7.5rem;
+    --h-size-8-0: 8rem;
+
+    --t-size-1-0: 1rem;
+    --t-size-1-2: 1.2rem;
+    --t-size-1-4: 1.4rem;
+    --t-size-1-6: 1.6rem;
+    --t-size-1-8: 1.8rem;
+    --t-size-2-0: 2rem;
+    --t-size-2-2: 2.2rem;
+    --t-size-2-4: 2.4rem;
+    --t-size-2-6: 2.6rem;
+    --t-size-2-8: 2.8rem;
+    --t-size-3-0: 3rem;
+
+}
+
+/* =============================================================================    universal       */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: lighter;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+html {
+    font-size: clamp(0.5rem, 0.4397rem + 0.3861vw, 0.625rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+b {
+    font-weight: bold;
+}
+
+/* =============================================================================    media queries   */
+
+@media (min-width: 768px) {
+
+    html {
+        font-size: clamp(0.625rem, 0.4375rem + 0.3906vw, 0.6875rem);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    html {
+        font-size: clamp(0.6875rem, 0.5337rem + 0.2404vw, 0.75rem);
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    html {
+        font-size: 0.75rem;
+    }
+
+}

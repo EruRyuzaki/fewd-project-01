@@ -1,0 +1,583 @@
+/* =============================================================================    imports         */
+
+@import url(../globals/global.css);
+
+/* =============================================================================    body            */
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-background-1);
+}
+
+/* =============================================================================    header          */
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 7rem;
+    background-color: var(--color-black-1);
+    box-shadow: var(--box-shadow-1);
+    z-index: 100;
+}
+
+header .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .nav > h1 {
+    font-size: var(--h-size-3-0);
+    font-weight: bold;
+}
+
+header .nav > h1 > a {
+    color: var(--color-white-1);
+}
+
+/* =============================================================================    main            */
+
+main ::-webkit-scrollbar {
+    width: 1px;
+}
+
+main ::-webkit-scrollbar-track {
+    background-color: var(--color-white-1);
+}
+
+main ::-webkit-scrollbar-thumb {
+    background-color: var(--color-blue-1);
+}
+
+/* =============================================================================    hero-section    */
+
+.hero-section .section-grid {
+    min-height: 100vh;
+    padding: 10rem 5% 3rem 5%;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-background-blend);
+    background-image: url(../index-images/bitcoins.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    box-shadow: var(--box-shadow-1);
+}
+
+.hero-section .section-grid .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1rem;
+    padding: 7rem 6% 7rem 6%;
+    background-color: var(--color-white-2);
+    border-top: 0.2rem solid var(--color-white-2);
+    border-left: 0.2rem solid var(--color-white-2);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow-2);
+    backdrop-filter: blur(5px);
+}
+
+.hero-section .section-grid .card > h1 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-4-0);
+    font-weight: bold;
+    -webkit-text-stroke: 0.2rem var(--color-black-1);
+}
+
+.hero-section .section-grid .card > h2 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-2-0);
+}
+
+.hero-section .section-grid .card > a {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-8);
+    font-weight: bold;
+    -webkit-text-stroke: 0.1rem var(--color-black-1);
+    background-color: var(--color-blue-1);
+    border: 0.2rem solid var(--color-white-2);
+    border-radius: 5rem;
+    margin: 3rem 0 0 0;
+    padding: 2rem 4rem 2rem 4rem;
+    transition-property: box-shadow;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+.hero-section .section-grid .card > a:hover {
+    box-shadow: var(--box-shadow-1);
+}
+
+/* =============================================================================    author-section  */
+
+.author-section {
+    max-width: 2000px;
+    margin: 0 auto 0 auto;
+    padding: 0 5% 0 5%;
+}
+
+.author-section .title {
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+}
+
+.author-section .title > h1 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-4-0);
+}
+
+.author-section .title > h1 > span {
+    color: var(--color-blue-1);
+}
+
+.author-section .section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "pic pic"
+        "title title"
+        "text text";
+    row-gap: 5rem;
+    padding: 5rem 0 5rem 0;
+    background-color: var(--color-background-2);
+    align-items: center;
+}
+
+.author-section .section-grid .picture-box {
+    grid-area: pic;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.author-section .section-grid .picture-box .image {
+    position: relative;
+    width: 50%;
+    max-width: 30rem;
+    aspect-ratio: 1 / 1;
+}
+
+.author-section .section-grid .picture-box .image > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.author-section .section-grid .title-box {
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+    padding: 0 5% 0 5%;
+}
+
+.author-section .section-grid .title-box > h1 {
+    color: var(--color-blue-1);
+    font-size: var(--h-size-3-0);
+    font-weight: bold;
+}
+
+.author-section .section-grid .title-box > h2 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-2-0);
+}
+
+.author-section .section-grid .text-box {
+    grid-area: text;
+    text-align: justify;
+    padding: 0 5% 0 5%;
+}
+
+.author-section .section-grid .text-box > p {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-6);
+}
+
+/* =============================================================================    posts-section   */
+
+.posts-section {
+    max-width: 2000px;
+    margin: 0 auto 0 auto;
+    padding: 0 5% 5rem 5%;
+}
+
+.posts-section .title {
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+}
+
+.posts-section .title > h1 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-4-0);
+}
+
+.posts-section .title > h1 > span {
+    color: var(--color-blue-1);
+}
+
+.posts-section .section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    row-gap: 5rem;
+}
+
+.posts-section .section-grid .post-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "topic"
+        "image"
+        "context";
+    row-gap: 2rem;
+    padding: 3rem 5% 3rem 5%;
+    background-color: var(--color-background-2);
+    transition-property: box-shadow;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+.posts-section .section-grid .post-grid:hover {
+    box-shadow: var(--box-shadow-2);
+}
+
+.posts-section .section-grid .post-grid .heart {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: var(--color-white-1);
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+.posts-section .section-grid .post-grid .heart::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white-1);
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+.posts-section .section-grid .post-grid .heart::after {
+    content: "";
+    position: absolute;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white-1);
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+.posts-section .section-grid .post-grid .heart:hover,
+.posts-section .section-grid .post-grid .heart:hover::before,
+.posts-section .section-grid .post-grid .heart:hover::after {
+    background-color: var(--color-blue-1);
+}
+
+.posts-section .section-grid .post-grid .topic-box {
+    grid-area: topic;
+}
+
+.posts-section .section-grid .post-grid .topic-box > h1 {
+    color: var(--color-blue-1);
+    font-size: var(--h-size-2-0);
+}
+
+.posts-section .section-grid .post-grid .topic-box > h2 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-1-5);
+}
+
+.posts-section .section-grid .post-grid .image-box {
+    grid-area: image;
+}
+
+.posts-section .section-grid .post-grid .image-box .image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    border: 0.1rem solid var(--color-white-1);
+}
+
+.posts-section .section-grid .post-grid .image-box .image > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.posts-section .section-grid .post-grid .context-box {
+    grid-area: context;
+    text-align: justify;
+}
+
+.posts-section .section-grid .post-grid .context-box > h3 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-1-0);
+}
+
+.posts-section .section-grid .post-grid .context-box h3 > span {
+    color: var(--color-blue-1);
+    font-size: var(--h-size-1-0);
+}
+
+.posts-section .section-grid .post-grid .context-box .description {
+    width: 100%;
+    aspect-ratio: 5 / 1;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    margin: 2rem 0 2rem 0;
+}
+
+.posts-section .section-grid .post-grid .context-box .description > p {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-4);
+    padding: 0 1rem 0 1rem;
+}
+
+.posts-section .section-grid .post-grid .context-box .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posts-section .section-grid .post-grid .context-box .footer > p {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-0);
+}
+
+.posts-section .section-grid .post-grid .context-box .footer > a {
+    color: var(--color-blue-1);
+    font-size: var(--t-size-1-2);
+    border: 0.1rem solid var(--color-blue-1);
+    padding: 1rem 5rem 1rem 5rem;
+    transition-property: color, background-color, border-radius;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+.posts-section .section-grid .post-grid .context-box .footer > a:hover {
+    color: var(--color-white-1);
+    background-color: var(--color-blue-1);
+    border-radius: 5rem;
+}
+
+/* =============================================================================    footer          */
+
+footer {
+    background-color: var(--color-black-1);
+    padding: 5rem 5% 5rem 5%;
+}
+
+footer .footer-grid {
+    max-width: 2000px;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "quote quote quote quote"
+        "news news news news"
+        "links links links links"
+        "contact contact contact contact";
+    row-gap: 5rem;
+    justify-items: center;
+}
+
+footer .footer-grid .quote-box {
+    grid-area: quote;
+    text-align: center;
+}
+
+footer .footer-grid .quote-box > h1 {
+    color: var(--color-white-1);
+    font-size: var(--h-size-3-5);
+}
+
+footer .footer-grid .newsletter-box {
+    grid-area: news;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+}
+
+footer .footer-grid .newsletter-box > h1 {
+    color: var(--color-blue-1);
+    font-size: var(--h-size-2-0);
+}
+
+footer .footer-grid .newsletter-box > form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+footer .footer-grid .newsletter-box > form .email-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+footer .footer-grid .newsletter-box > form .email-box > label {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-6);
+}
+
+footer .footer-grid .newsletter-box > form .email-box > #email {
+    width: 60vw;
+    max-width: 26rem;
+    height: 2.5rem;
+    background-color: var(--color-white-1);
+    border: 0.1rem solid var(--color-blue-1);
+    padding: 0 3% 0 3%;
+    color: var(--color-black-1);
+    font-size: var(--t-size-1-2);
+}
+
+footer .footer-grid .newsletter-box > form > button {
+    width: 100%;
+    height: 3.5rem;
+    color: var(--color-blue-1);
+    font-size: var(--t-size-1-2);
+    text-align: center;
+    background-color: var(--color-black-1);
+    border: 0.1rem solid var(--color-blue-1);
+    cursor: pointer;
+    transition-property: color, background-color, border-radius;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+footer .footer-grid .newsletter-box > form > button:hover {
+    color: var(--color-white-1);
+    background-color: var(--color-blue-1);
+    border-radius: 5rem;
+}
+
+footer .footer-grid .links-box {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+}
+
+footer .footer-grid .links-box > h1 {
+    color: var(--color-blue-1);
+    font-size: var(--h-size-2-0);
+}
+
+footer .footer-grid .links-box .links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+footer .footer-grid .links-box .links > a {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-6);
+    transition-property: color;
+    transition-timing-function: linear;
+    transition-duration: 0.2s;
+}
+
+footer .footer-grid .links-box .links > a:hover {
+    color: var(--color-blue-1);
+}
+
+footer .footer-grid .contact-box {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+}
+
+footer .footer-grid .contact-box > h1 {
+    color: var(--color-blue-1);
+    font-size: var(--h-size-2-0);
+}
+
+footer .footer-grid .contact-box .contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+footer .footer-grid .contact-box .contact > p {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-6);
+}
+
+footer .footer-grid .contact-box .contact .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-grid .contact-box .contact .socials > a {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-6);
+}
+
+footer .page-design {
+    position: relative;
+    text-align: center;
+    padding: 7rem 0 0 0;
+}
+
+footer .page-design::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0;
+    left: 0;
+    height: 0.1rem;
+    background-color: var(--color-white-1);
+}
+
+footer .page-design > p {
+    color: var(--color-white-1);
+    font-size: var(--t-size-1-0);
+}

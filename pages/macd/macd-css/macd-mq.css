@@ -1,0 +1,49 @@
+/* =============================================================================    imports         */
+
+@import url(../../../globals/global.css);
+
+/* =============================================================================    media queries   */
+
+@media (min-width: 768px) {
+
+    footer .footer-grid {
+        grid-template-areas:
+            "quote quote quote quote"
+            "news news links contact";
+    }
+
+    footer .footer-grid .newsletter-box {
+        text-align: left;
+    }
+
+    footer .footer-grid .links-box {
+        text-align: left;
+    }
+
+    footer .footer-grid .contact-box {
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .description-section .section-grid .description-box .grid-1 {
+        grid-template-areas:
+            "txt img";
+        column-gap: 3rem;
+    }
+
+    .description-section .section-grid .description-box .grid-2 {
+        grid-template-areas:
+            "img txt";
+        column-gap: 3rem;
+    }
+
+    .description-section .section-grid .description-box .grid-3 {
+        grid-template-areas:
+            "txt img";
+        column-gap: 3rem;
+    }
+
+}
